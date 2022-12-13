@@ -910,6 +910,20 @@ html[dir=ltr] .vision .container {
   align-items: center;
   transition: all linear 0.2s;
 }
+.shopping-btn::before {
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  content: "";
+  top: 100%;
+  inset-inline-end: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  transition-duration: 0.3s;
+  transition-property: transform, opacity;
+}
 .shopping-btn i {
   font-size: 30px;
   color: #ffffff;
@@ -929,6 +943,10 @@ html[dir=rtl] .shopping-btn {
   }
   .gallery-col {
     margin-bottom: 20px;
+    width: 50% !important;
+  }
+  .gallery-col img {
+    height: auto;
   }
   .shopping-btn {
     padding: 11px 20px;
@@ -944,8 +962,11 @@ html[dir=rtl] .shopping-btn {
 }
 @media only screen and (min-width: 768px) {
   .shopping-btn:hover {
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
-    transform: scale(1.07);
+    transform: translateY(-5px);
+  }
+  .shopping-btn:hover::before {
+    opacity: 1;
+    transform: translateY(5px);
   }
 }
 .news {
@@ -963,12 +984,22 @@ html[dir=rtl] .shopping-btn {
   padding-bottom: 80px;
 }
 
+.news-item {
+  overflow: hidden;
+}
+.news-item:hover img {
+  transform: scale(1.1);
+}
+.news-item .news-img-wrapper {
+  overflow: hidden;
+}
 .news-item .news-img-wrapper img {
   width: 554px;
   height: 228px;
   -o-object-fit: cover;
      object-fit: cover;
   max-width: 100%;
+  transition: all linear 0.3s;
 }
 .news-item .news-item-desc a:first-child {
   font-size: 20px;
@@ -1194,6 +1225,9 @@ footer h4 {
     padding: 50px 0 30px 0;
   }
   .copyright {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin-top: 30px;
   }
   .copyright a {

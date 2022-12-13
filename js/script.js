@@ -21,7 +21,7 @@ setTimeout(() => {
 // blog swiper
 const swiper2 = new Swiper(' .news .mySwiper', {
   loop: true,
-  autoplay: true,
+  // autoplay: true,
  
   pagination: {
     el: '.news .swiper-pagination',
