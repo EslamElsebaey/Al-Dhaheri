@@ -645,7 +645,7 @@ html[dir=ltr] .li-drop .ul-drop {
   padding-top: 90px;
   padding-bottom: 90px;
   height: 100%;
-  background-image: url(../../../images/leaf\ bg.png);
+  background-image: url(../images/leaf\ bg.png);
   background-position: -640% 149%;
   background-repeat: no-repeat;
 }
@@ -845,7 +845,7 @@ html[dir=ltr] .vision .container {
 .gallery {
   padding: 90px 0;
   background-color: #519356;
-  background-image: url(../../../images/leaf\ bg.png);
+  background-image: url(../images/leaf\ bg.png);
   background-repeat: no-repeat;
   background-position: 49% -67%;
   overflow: hidden;
