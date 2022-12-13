@@ -1,21 +1,12 @@
 .vision{
-    background-color: #fff;
-    // padding: 90px 0;
+    padding: 90px 0;
     overflow: hidden;
-   
-    .container{
-        background-color: $main-color;
-        padding-top: 90px ;
-        padding-bottom: 90px;
-        height: 100%;
-        background-image: url(../images/leaf\ bg.png);
-        background-position:-640% 149%;
-        background-repeat: no-repeat;
-        
-    }
+    background-image:  url(../images/leaf\ bg.png) , linear-gradient(to right, #519356 79%, #fff 0);
+    background-position:-152% 149%;
+    background-repeat: no-repeat;
+ 
     .video{
         position: relative;
-        inset-inline-end: 80px;
         a{
             position: relative;
         }
@@ -27,8 +18,15 @@
     }
 }
 html[dir="ltr"]{
+    .vision-desc-parent{
+        transform: translateX(30px);
+    }
     .vision .container{
         background-position: 600% 149%;
+    }
+    .vision {
+       background-image:  url(../images/leaf\ bg.png) , linear-gradient(to left, #519356 79%, #fff 0);
+       background-position: 239% 164%;
     }
 }
 .video-overlay{
@@ -37,10 +35,9 @@ html[dir="ltr"]{
     width: 100%;
     background-color: rgba($color: #000000, $alpha: .2);
 }
-.vision-desc-parent{
-    width: 90%;
-    margin-inline-start: -50px;
 
+.vision-desc-parent{
+    transform: translateX(-30px);
     .vision-desc-child1 , .vision-desc-child2{
         display: flex;
         align-items: flex-start;
@@ -87,19 +84,18 @@ html[dir="ltr"]{
 
 
 @include max-768 {
+    .vision{
+        background-image: none !important;
+        background-color: $main-color !important;
+    }
+    .vision-desc-parent{
+        transform: translateX(0) !important;
+    }
     .vision-desc-parent .vision-desc-child1{
         margin-bottom: 15px;
     }
     .vision .video{
         inset-inline-end: 0;
-    }
-    .vision .container{
-        padding-top: 50px ;
-        padding-bottom: 50px;
-        background-image: none;
-    }
-    .vision .col-md-6 {
-        padding: 0;
     }
     .vision .video-img{
         width: 100%;
@@ -129,23 +125,5 @@ html[dir="ltr"]{
 }
 
 
-@include min-1200{
-    .vision .container{
-        max-width: 1400px;
-        margin-inline-end: 0;
-    }
-}
 
 
-@include max-1200{
-    .vision .video{
-        inset-inline-end: 0;
-    }
-    .vision-desc-parent{
-        margin-inline-start: 0;
-    }
-    .vision .row {
-        width: 100%;
-        margin: 0 ;
-    }
-}

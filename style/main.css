@@ -637,21 +637,14 @@ html[dir=ltr] .li-drop .ul-drop {
   }
 }
 .vision {
-  background-color: #fff;
+  padding: 90px 0;
   overflow: hidden;
-}
-.vision .container {
-  background-color: #519356;
-  padding-top: 90px;
-  padding-bottom: 90px;
-  height: 100%;
-  background-image: url(../images/leaf\ bg.png);
-  background-position: -640% 149%;
+  background-image: url(../images/leaf\ bg.png), linear-gradient(to right, #519356 79%, #fff 0);
+  background-position: -152% 149%;
   background-repeat: no-repeat;
 }
 .vision .video {
   position: relative;
-  inset-inline-end: 80px;
 }
 .vision .video a {
   position: relative;
@@ -663,8 +656,15 @@ html[dir=ltr] .li-drop .ul-drop {
   height: 368px;
 }
 
+html[dir=ltr] .vision-desc-parent {
+  transform: translateX(30px);
+}
 html[dir=ltr] .vision .container {
   background-position: 600% 149%;
+}
+html[dir=ltr] .vision {
+  background-image: url(../images/leaf\ bg.png), linear-gradient(to left, #519356 79%, #fff 0);
+  background-position: 239% 164%;
 }
 
 .video-overlay {
@@ -675,9 +675,7 @@ html[dir=ltr] .vision .container {
 }
 
 .vision-desc-parent {
-  width: 90%;
-  -webkit-margin-start: -50px;
-          margin-inline-start: -50px;
+  transform: translateX(-30px);
 }
 .vision-desc-parent .vision-desc-child1, .vision-desc-parent .vision-desc-child2 {
   display: flex;
@@ -725,19 +723,18 @@ html[dir=ltr] .vision .container {
 }
 
 @media only screen and (max-width: 767px) {
+  .vision {
+    background-image: none !important;
+    background-color: #519356 !important;
+  }
+  .vision-desc-parent {
+    transform: translateX(0) !important;
+  }
   .vision-desc-parent .vision-desc-child1 {
     margin-bottom: 15px;
   }
   .vision .video {
     inset-inline-end: 0;
-  }
-  .vision .container {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-image: none;
-  }
-  .vision .col-md-6 {
-    padding: 0;
   }
   .vision .video-img {
     width: 100%;
@@ -763,26 +760,6 @@ html[dir=ltr] .vision .container {
   }
   .vision-desc-parent img {
     width: 30px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .vision .container {
-    max-width: 1400px;
-    -webkit-margin-end: 0;
-            margin-inline-end: 0;
-  }
-}
-@media only screen and (max-width: 1199px) {
-  .vision .video {
-    inset-inline-end: 0;
-  }
-  .vision-desc-parent {
-    -webkit-margin-start: 0;
-            margin-inline-start: 0;
-  }
-  .vision .row {
-    width: 100%;
-    margin: 0;
   }
 }
 .services {
@@ -1339,13 +1316,25 @@ img {
   outline: none !important;
 }
 
+@media only screen and (max-width: 1199px) {
+  .vision {
+    background-image: linear-gradient(to right, #519356 79%, #fff 0);
+  }
+  html[dir=ltr] .vision {
+    background-image: linear-gradient(to left, #519356 79%, #fff 0);
+  }
+}
 ::-webkit-scrollbar {
   width: 7px;
   height: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #519356;
+  background: #c4a26b;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #519356;
 }
 
 .toTop {

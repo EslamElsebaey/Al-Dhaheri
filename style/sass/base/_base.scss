@@ -57,6 +57,17 @@ img {
   outline: none !important;
 }
 
+@include max-1200{
+  .vision{
+    background-image:  linear-gradient(to right, #519356 79%, #fff 0);
+  }
+  html[dir="ltr"]{
+    .vision{
+      background-image: linear-gradient(to left, #519356 79%, #fff 0); 
+    }
+  }
+}
+
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -64,10 +75,12 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $main-color;
-
+  background: $second-color;
 }
 
+::-webkit-scrollbar-track{
+  background-color:  $main-color;
+}
 
 
 // back-up
