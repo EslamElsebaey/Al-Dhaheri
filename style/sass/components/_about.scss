@@ -73,6 +73,11 @@
 
 
 @include max-768 {
+    html[dir="ltr"] {
+        .about .about-desc button{
+            font-size: 14px;
+        }
+    }
   
     .about h2 {
         font-size: 20px;
@@ -89,7 +94,7 @@
     .about .about-desc button {
        
         height: 40px;
-        padding: 0 25px;
+        padding: 0 23px;
         font-size: 15px;
         width: auto;
     }

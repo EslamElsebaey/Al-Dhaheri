@@ -581,6 +581,9 @@ html[dir=ltr] .li-drop .ul-drop {
 }
 
 @media only screen and (max-width: 767px) {
+  html[dir=ltr] .about .about-desc button {
+    font-size: 14px;
+  }
   .about h2 {
     font-size: 20px;
   }
@@ -595,7 +598,7 @@ html[dir=ltr] .li-drop .ul-drop {
   }
   .about .about-desc button {
     height: 40px;
-    padding: 0 25px;
+    padding: 0 23px;
     font-size: 15px;
     width: auto;
   }
