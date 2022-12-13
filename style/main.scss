@@ -1,0 +1,24 @@
+
+// Abstracts
+@import "sass/abstracts/variables";
+@import "sass/abstracts/mixins";
+
+
+
+//Components
+
+//Layout
+@import "sass/components/header";
+@import "sass/components/main";
+@import "sass/components/about";
+@import "sass/components/vision";
+@import "sass/components/services";
+@import "sass/components/gallery";
+@import "sass/components/news";
+@import "sass/components/footer";
+
+
+// Base and fonts
+@import "sass/base/base";
+@import "sass/base/fonts";
+
