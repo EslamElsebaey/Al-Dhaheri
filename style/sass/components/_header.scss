@@ -12,6 +12,7 @@ header{
     position: absolute;
      width: 100%;
     inset-inline-end: 0;
+    transition: all linear .3s;
     z-index: 15;
    
 }
@@ -50,6 +51,22 @@ nav{
     }
    
 }
+
+
+  .fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    transition: 0.5s;
+    box-shadow: 0 0 4px rgb(22 22 22 / 10%);
+    background-color: #fff;
+  }
+  
+  .fixsedt {
+    top: -130px;
+  }
 
 .nav-ul {
     display: flex;
@@ -239,7 +256,7 @@ html[dir="ltr"]{
         }
     }
     .logo img{
-        width: 80px;
+        width: 60px;
         height: auto;
         max-width: 100%;
     }

@@ -1,7 +1,4 @@
 
-$(document).ready(function(){
-
-  // preloader
 
 setTimeout(()=>{
   $("#preloader img").css("opacity" , "0")
@@ -13,8 +10,53 @@ setTimeout(() => {
   })
   $("body").css("overflow" , "visible");
 }, 1500);
+$(document).ready(function(){
+
+  // preloader
+
+
 
 /************************************************************************ */
+
+
+//fixed nav
+
+
+
+
+  //~~~~~~~~~ fixed header
+ if ($(window).width() < 768) {
+    //~~~~~~~~~ fixed header
+    $(window).on("scroll", function () {
+      if ($(window).scrollTop() > 150) {
+        $("header").addClass("fixed");
+        $(".openNav-btn i").css("color" , "#519356");
+        $(".logo img").css("filter" , " brightness(0) saturate(100%) invert(49%) sepia(13%) saturate(1424%) hue-rotate(74deg) brightness(101%) contrast(88%)")
+      } else {
+        $("header").removeClass("fixed");
+        $(".openNav-btn i").css("color" , "#fff");
+        $(".logo img").css("filter" , "none") ;
+      }
+    });
+    var fixedBar = document.querySelector("header"),
+      prevScrollpos = $(window).scrollTop();
+
+    (window.onscroll = function () {
+      var o = $(window).scrollTop();
+      prevScrollpos < o && prevScrollpos > 0
+        ? fixedBar.classList.add("fixsedt")
+        : fixedBar.classList.remove("fixsedt"),
+        (prevScrollpos = o);
+    })   
+  }
+
+
+
+
+
+
+
+
 
 
 
