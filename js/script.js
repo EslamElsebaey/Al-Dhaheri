@@ -1,28 +1,15 @@
 
 
-setTimeout(()=>{
+
+$(document).ready(function(){
   $("#preloader img").css("opacity" , "0")
-} , 700)
-setTimeout(() => {
   $("#preloader").css({
     opacity : "0" , 
     visibility : "hidden" ,
   })
-  $("body").css("overflow" , "visible");
-}, 1500);
-$(document).ready(function(){
-
-  // preloader
-
-
-
-/************************************************************************ */
-
+  // $("body").css("overflow" , "visible")
 
 //fixed nav
-
-
-
 
   //~~~~~~~~~ fixed header
  if ($(window).width() < 768) {
