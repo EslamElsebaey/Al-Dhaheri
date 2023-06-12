@@ -77,26 +77,30 @@ const swiper2 = new Swiper(' .news .mySwiper', {
 
 // counters
 
-let experience = parseInt(document.querySelector(".exp").innerHTML);
-let clients = parseInt(document.querySelector(".clients").innerHTML);
+if($(".clients").length > 0){
+  let experience = parseInt(document.querySelector(".exp").innerHTML);
+  let clients = parseInt(document.querySelector(".clients").innerHTML);
+  
+  
+  let counter = setInterval(() => {
+    experience = experience+1  ; 
+    document.querySelector(".exp").innerHTML =  "+" + experience
+     if(experience == 15) {
+       clearInterval(counter)
+     }
+   },500);
+   
+  
+  let counter2 = setInterval(() => {
+    clients = clients+1  ; 
+    document.querySelector(".clients").innerHTML =  "+" + clients
+     if(clients == 2000) {
+       clearInterval(counter2)
+     }
+   }, 3);
+}
 
 
-let counter = setInterval(() => {
-  experience = experience+1  ; 
-  document.querySelector(".exp").innerHTML =  "+" + experience
-   if(experience == 15) {
-     clearInterval(counter)
-   }
- },500);
- 
-
-let counter2 = setInterval(() => {
-  clients = clients+1  ; 
-  document.querySelector(".clients").innerHTML =  "+" + clients
-   if(clients == 2000) {
-     clearInterval(counter2)
-   }
- }, 3);
  
 
 /************************************************************************ */

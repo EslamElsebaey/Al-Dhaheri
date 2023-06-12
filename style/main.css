@@ -1231,9 +1231,6 @@ footer h4 {
   .message input::-moz-placeholder {
     font-size: 13px;
   }
-  .message input:-ms-input-placeholder {
-    font-size: 13px;
-  }
   .message input::placeholder {
     font-size: 13px;
   }
